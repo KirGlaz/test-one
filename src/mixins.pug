@@ -1,0 +1,25 @@
+mixin icon(name, className)
+  - var icon = require(`images/icons/${name}.svg`);
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+    use(xlink:href=icon.url)
+
+mixin image(path, className)
+  img(src=require(`images/${path}`) class=className)
+
+mixin nav(className, classNametwo)
+  - var section = [{"text": 'Главная', 'link': "#s1"}, {"text": 'Обо мне', 'link': "#s2"}, {"text": 'Навыки', 'link': "#s3"}, {"text": 'Связаться', 'link': "#s6"}]
+    nav(class=`${className} ${classNametwo}`)        
+      ul(class=`${className}__list`)            
+        each sec in section
+          li(class=`${className}__item`)
+            a(class=`${className}__link` href=sec.link)= sec.text
+
+mixin slider(className, classNametwo, activeIndex)
+  - var information = [{"title": 'СМИ', "text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', "pic": 'mass.jpg'}, {"title": 'Фриланс', "text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', "pic": 'free.png'}, {"title": 'Loftschool',"text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', "pic": 'it.jpg'}]   
+    ul(class=`${className}__list` id='sliderList')
+      each info, i in information        
+        li(class=`${className}__item ${i === 0 ? className + 'active' : ''}`)
+          img(src=require(`images/content/${info.pic}`) class=`${className}__photo`)
+          div(class=`${className}__info`)
+            div(class=`${className}__title`)= info.title
+            div(class=`${className}__title`)= info.text

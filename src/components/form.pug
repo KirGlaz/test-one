@@ -1,0 +1,119 @@
+form.form                   
+    .form__row
+        lable.form__block
+            .form__block-title First name
+            input.form__imput(type='text' name='name' required='' placeholder="Alice")
+            .error
+        lable.form__block
+            .form__block-title Last name
+            input.form__imput(type='text' name='name' required='' placeholder="Miller")
+            .error
+    .form__row
+        lable.form__block
+            .form__block-title Nationality
+            .select-block--county
+                select.form__select.county(name='text' size='1')
+                    option.form__option American
+                    option.form__option Russian
+                    option.form__option Europian
+        lable.form__block
+            .form__block-title E-mail
+            input.form__imput(type='text' name='email' required='' placeholder="alice.miller@yahoo.com")
+            .error
+    .form__row                        
+        lable.form__block--select
+            .form__block-title Date of Birth
+            .selects
+                .select-block--date
+                    select.form__select.date(name='number' size='1')
+                        option.form__option 1
+                        option.form__option 2
+                        option.form__option 3
+                        option.form__option 4
+                        option.form__option 5
+                        option.form__option 6
+                        option.form__option 7
+                        option.form__option 8
+                        option.form__option 9
+                        option.form__option 10
+                        option.form__option 11
+                        option.form__option 12
+                        option.form__option 13
+                        option.form__option 14
+                        option.form__option 15
+                        option.form__option 16
+                        option.form__option 17
+                        option.form__option 18
+                        option.form__option 19
+                        option.form__option 20
+                        option.form__option 21
+                        option.form__option 22
+                        option.form__option 23
+                        option.form__option 24
+                        option.form__option 25
+                        option.form__option 26
+                        option.form__option 27
+                        option.form__option 28
+                        option.form__option 29
+                        option.form__option 30
+                        option.form__option 31
+
+                .select-block--montch
+                    select.form__select.montch(name='text' size='1')
+                        option.form__option January
+                        option.form__option February
+                        option.form__option March
+                        option.form__option April
+                        option.form__option May
+                        option.form__option June
+                        option.form__option July
+                        option.form__option August
+                        option.form__option September
+                        option.form__option October
+                        option.form__option November
+                        option.form__option December             
+
+                .select-block--year
+                    select.form__select.year(name='text' size='1')
+                        option.form__option 1990
+                        option.form__option 1991
+                        option.form__option 1992
+                        option.form__option 1993
+                        option.form__option 1994
+                        option.form__option 1995
+                        option.form__option 1996
+                        option.form__option 1997
+                        option.form__option 1998
+                        option.form__option 1999
+                        option.form__option 2000
+                        option.form__option 2001                    
+
+        lable.form__block--gender
+            .form__radio-buttons
+                .form__block-titleg Gender
+                .form__radio-wrapper                          
+                    label.form__radio
+                        input.form__radio-input(name='radio' type='radio')
+                        .form__radio-content
+                            .form__radio-btn
+                            .form__radio-text Male
+                    label.form__radio
+                        input.form__radio-input(name='radio' type='radio')
+                        .form__radio-content
+                            .form__radio-btn
+                            .form__radio-text Female  
+    .form__row
+        lable.form__block
+            .form__block-title Password
+            input.form__imput(type='password' name='password' required='' placeholder="")
+            .error
+        lable.form__block
+            .form__block-title Confirm Password
+            input.form__imput(type='password' name='password' required='' placeholder="")
+            .error
+    .form__end
+        .form-login 
+            span.form-login__text Have an account?
+            a.form-login__link Login
+        .form-submit
+            button.form-submit__btn Complete Signup  

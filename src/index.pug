@@ -1,0 +1,25 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title TEST   
+  body
+    .wrapper 
+      .maincontent
+        section.test
+          .container.test__container
+            .test-content
+              .test-content--left
+                .title
+                  h1.title__text Sign up
+              .test-content--right
+                +icon('new', 'new')
+                .content 
+                  .heading
+                    h2.headling__title New user?
+                    h3.headling__subtitle Use the form below to create your account.
+                  include ./components/form.pug                                                    
